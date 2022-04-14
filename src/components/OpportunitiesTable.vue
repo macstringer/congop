@@ -15,10 +15,7 @@
             <td v-for="field in fields" :key="field.key">
                 
                 <div class="inputsContainer">
-                    <!-- p sure the set focus is the thing slowing this site down -->
                     <div>
-                        <!-- <input class="textInputs" v-model="filterHolder[field.key]" :placeholder="'***************'" 
-                            v-on:keyup.enter="addTag(field.key)"> -->
                         <vSelect class="textInputs" :options="uniqueTerms[field.key]" style="border: none"
                             v-model="filterHolder[field.key]"
                             :value="filterHolder[field.key]"
@@ -26,28 +23,9 @@
                             placeholder="**************"
                             >
                         </vSelect>
-                        <!-- <Dropdown class="textInputs" 
-                            :options="uniqueTerms[field.key]"
-                            v-on:selected="validateSelection"
-                            :disabled="false"
-                            name=""
-                            :maxItem="100"
-                            placeholder="******">
-                        </Dropdown> -->
-
-                        <!-- 
-                            
-                            v-on:filter="getDropdownValues" -->
-                        <!-- <button class="addButton" @click="columnToFocus[field.key] = !columnToFocus[field.key]">v</button> -->
                     </div>
                 </div>
-<!-- @blur="setFocusFalse(field.key)" @focus="setFocusTrue(field.key)" -->
 
-<!-- :isFocused=columnToFocus[field.key] -->
-                <!-- <div v-if="columnToFocus[field.key] == false"> -->
-                    <!-- <SearchResults  :typeText="filterHolder[field.key]" :allColTerms="uniqueTerms[field.key]" /> -->
-                    <!-- <p> I AM FOCUSED </p>
-                </div> --> 
 
                 <div class="tagsContainer">
                     <!-- <button v-if="filterDict[field.key] != undefined">{{ filterDict[field.key] }}</button> -->
@@ -58,6 +36,10 @@
                 </div>
             </td>
         </template>
+        <template slot="Internship Website" slot-scope="data">
+            <b-link :href="data.item">link</b-link>
+        </template>
+
     </b-table>
 
   </div>
