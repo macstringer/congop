@@ -6,6 +6,9 @@
 </template>
 
 <script>
+
+
+
 import TitleNav from './components/TitleNav.vue'
 import OpportunitiesTable from './components/OpportunitiesTable.vue'
 
